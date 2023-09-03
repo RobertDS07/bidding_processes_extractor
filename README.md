@@ -2,7 +2,7 @@
 
 Olá, eu sou [Robert](https://robertdeveloper.com/about), e estou muito contente em tê-lo aqui!
 
-Este repositório contém a API do desafio técnico para a vaga de Desenvolvedor Back End - Primeira.
+Este repositório contém a API do desafio técnico para a vaga de Desenvolvedor Back End - Botdesigner.
 
 Antes de mais nada, gostaria de fazer um pequeno esclarecimento.
 
