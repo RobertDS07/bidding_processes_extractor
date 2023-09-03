@@ -1,4 +1,4 @@
-# [API] Aurora
+# [API] Extrator de processos licitatórios
 
 Olá, eu sou [Robert](https://robertdeveloper.com/about), e estou muito contente em tê-lo aqui!
 
@@ -50,7 +50,7 @@ Este projeto segue princípios de arquitetura limpa, CQRS, "ports and adapters",
 Como eu não obtive resposta sobre minha pergunta eu imaginei que o desafio era conectar os canais de comunicações como Whatsapp, Twitter, Facebook e etc... A nossa API, fiz o ER pensando nisto.
 
 <div align="center">
-    <img src="./docs/er.png" alt="Imagem contendo o ER do banco">
+    <img src="./docs/er.jpg" alt="Imagem contendo o ER do banco">
 </div>
 
 ## Iniciando o Projeto
