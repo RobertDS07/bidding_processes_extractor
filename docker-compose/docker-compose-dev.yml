@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  dev-db:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/extractor-data
+    environment:
+      POSTGRES_DB: extractor_dev
+      POSTGRES_USER: extractor_dev
+      POSTGRES_PASSWORD: extractor_dev
+    ports:
+      - 5433:5432
+  dev-redis:
+    image: redis:3.2
+    ports:
+      - 6381:6379
+volumes:
+  db-data:

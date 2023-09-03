@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  test-db:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/extractor-data-test
+    environment:
+      POSTGRES_DB: extractor_test
+      POSTGRES_USER: extractor_test
+      POSTGRES_PASSWORD: extractor_test
+    ports:
+      - 5434:5432
+  test-redis:
+    image: redis:3.2
+    ports:
+      - 6382:6379
+
+volumes:
+  db-data:
