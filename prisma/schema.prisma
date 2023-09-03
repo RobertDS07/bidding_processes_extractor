@@ -1,0 +1,40 @@
+datasource db {
+    url      = env("DATABASE_URL")
+    provider = "postgresql"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model BiddingProcess {
+    id                   Int                  @id
+    identification       String
+    number               String
+    summary              String
+    biddingSituationCode Int                  @map("bidding_situation_code")
+    statusCode           Int                  @map("status_code")
+    biddingStartDatetime DateTime             @map("bidding_start_date_time")
+    publicationDate      DateTime
+    createdAt            DateTime             @default(now()) @map("created_at")
+    updatedAt            DateTime             @updatedAt @map("updated_at")
+    BiddingProcessItem   BiddingProcessItem[]
+
+    @@map("bidding_process")
+}
+
+model BiddingProcessItem {
+    biddingProcessId  Int      @map("bidding_process_id")
+    quantity          Int
+    referenceValue    Int      @map("reference_value")
+    description       String
+    participationCode Int      @map("paricipation_code")
+    code              Int
+    createdAt         DateTime @default(now()) @map("created_at")
+    updatedAt         DateTime @updatedAt @map("updated_at")
+
+    BiddingProcess BiddingProcess @relation(fields: [biddingProcessId], references: [id])
+
+    @@id([biddingProcessId, code])
+    @@map("biddin_process_item")
+}
